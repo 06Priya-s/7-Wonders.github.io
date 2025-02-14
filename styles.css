@@ -18,18 +18,29 @@ header {
 nav {
     background-color: #444444; /* Slightly lighter background for nav */
     padding: 10px 0;
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Set flex-direction as row */
+    justify-content: space-between; /* Justify content as space between */
+    align-items: center; /* Align items in the center */
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    display: inline-flex; /* Use flexbox for ul */
+    justify-content: space-between;
+    flex-direction: row; /* Set flex-direction as row for ul */
 }
 
-nav ul li {
+/* Commenting out existing styling for li element */
+/* nav ul li {
     display: inline;
     margin: 0 15px;
+} */
+
+nav ul li {
+    margin: 0 15px; /* Adjust margin as needed */
 }
 
 nav ul li a {
@@ -40,6 +51,12 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+nav img {
+    width: 50ch;
+    position: center;
+    top: 10px;
 }
 
 main {
@@ -63,13 +80,27 @@ img {
     width: 100%;
     height: auto;
     max-width: 600px; /* Max width to control image size */
-    display: block;
-    margin: 20px auto;
+    display: center;
+    margin: 25px auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 p {
     text-align: justify; /* Justified text for better readability */
-    color: #666666; /* Grey color for paragraph text */
+    color: #271010; /* Grey color for paragraph text */
     line-height: 1.8;
 }
 
